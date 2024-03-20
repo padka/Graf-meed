@@ -1,0 +1,78 @@
+.advantages-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f2f1eb;
+  color: #3c3a3a;
+  padding: 20px;
+}
+
+.advantage-item {
+  position: relative;
+  text-align: left;
+  padding-left: 20px;
+  flex-basis: 200px; 
+  flex-grow: 1; 
+  margin: 50px; 
+}
+.advantage-text{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  order: -1;
+  color:#000000;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.advantage-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 100%;
+  background-color:  #d1a782;
+}
+
+.advantage-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.advantage-item a {
+  color: #363628;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+ 
+}
+
+.advantage-item a:hover {
+  color: #336b22;
+
+}
+
+/* Адаптивные медиа-запросы */
+@media (max-width: 768px) {
+  .advantages-container {
+    flex-direction: column; 
+  }
+
+  .advantage-item {
+    text-align: center;
+    padding-left: 0; 
+  }
+
+  .advantage-item::before {
+    display: none; 
+  }
+
+  .advantage-item h3 {
+    font-size: 1em; 
+  }
+ 
+  
+}

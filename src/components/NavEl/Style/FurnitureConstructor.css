@@ -1,0 +1,115 @@
+.furniture-constructor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.constructor-layout {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 50%; /* Изображение занимает половину ширины на больших экранах */
+  text-align: center; /* Центрирование изображения */
+}
+
+.product-image img {
+  max-width: 100%; /* Изображение адаптируется к размеру блока */
+  height: auto;
+}
+
+.settings {
+  flex: 1;
+  max-width: 50%; /* Элементы управления занимают другую половину */
+  padding-left: 20px; /* Отступ от изображения */
+}
+
+.dimension-sliders, .material-selector, .setting {
+  margin-bottom: 20px;
+}
+
+.dimension-sliders .slider, .material-selector, .setting {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="range"], input[type="number"], select {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; 
+  width: 100%;
+  margin: 8px 0;
+}
+
+input[type="number"] {
+  padding: 5px;
+}
+
+.material-selector select, .setting input[type="number"] {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+
+input[type="range"]:focus, input[type="number"]:focus, select:focus {
+  border-color: #000000;
+  outline: none;
+}
+/* Стиль для основной полосы ползунка */
+input[type="range"] {
+  -webkit-appearance: none; /* Убрать стандартный стиль для Chrome, Safari */
+  width: 100%; /* Ширина полосы ползунка */
+  height: 8px; /* Высота полосы ползунка */
+  background: #33cd80; /* Цвет фона полосы ползунка */
+  border-radius: 5px; /* Скругление углов полосы ползунка */
+  outline: none; /* Убрать контур вокруг элемента при клике */
+  opacity: 0.7; /* Прозрачность полосы ползунка */
+  -webkit-transition: .2s; /* Плавность перехода эффектов */
+  transition: opacity .2s;
+}
+
+/* Стиль для ползунка */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Убрать стандартный стиль для Chrome, Safari */
+  appearance: none;
+  width: 20px; /* Ширина ползунка */
+  height: 20px; /* Высота ползунка */
+  background: #d9680d; /* Цвет фона ползунка */
+  cursor: pointer; /* Курсор в виде указателя */
+  border-radius: 50%; /* Скругление углов ползунка */
+}
+
+
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .constructor-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image, .settings {
+    max-width: 100%;
+  }
+
+  .settings {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}

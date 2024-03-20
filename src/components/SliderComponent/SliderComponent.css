@@ -1,0 +1,86 @@
+/* SliderComponent.css */
+.slider-container {
+  max-width: 1400px;
+  height: auto;
+  margin: auto;
+}
+
+.slick-slide {
+  position: relative;
+  text-align: center;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (min-width:1025px){
+.slick-slide img{
+  height: 800px
+}
+}
+@media (min-width:784px) and (max-width:1024px){
+  .slick-slide img{
+    height: 600px;
+  }
+}
+@media (max-width:784px){
+  .slick-slide img{
+    height: 400px;
+  }
+}
+/* Позиционирование надписи и кнопки */
+.slick-slide h2,
+.slick-slide button {
+  position: absolute;
+  font-family: inter; 
+  font-weight: 10;
+  font-size: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(42, 42, 42);
+}
+
+.slick-slide h2 {
+  top: 30%; 
+}
+
+.slick-slide button {
+  top: 60%; 
+  background-color: #83D447; 
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  border: none;
+  border-radius:12px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Стили для точек */
+.slick-dots {
+  top: 90%;
+}
+
+.slick-dots li button:before {
+  color: #939393; 
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFFFFF; 
+}
+
+/* Скрыть стрелки */
+.slick-prev,
+.slick-next {
+  display: none !important;
+} .slick-slide button {
+    top: 70%; 
+    width: 150px; 
+    height: 40px; 
+    font-size: 18px; 
+    text-align: center;
+  }

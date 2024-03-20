@@ -1,0 +1,69 @@
+/* Общие стили для профиля пользователя */
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Стили для административной и пользовательской панели */
+.admin-content, .user-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Максимальная ширина для больших экранов */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f9fa; /* Светлый фон для панелей */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для подъема панелей */
+}
+
+/* Стили для отображения заказов */
+.order-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #fff; /* Белый фон для карточек заказа */
+}
+
+/* Стили для кнопок */
+.btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+.btn-warning {
+  background-color: #ffc107; /* Желтая кнопка */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Красная кнопка */
+}
+
+.btn-warning:hover {
+  background-color: #e0a800; /* Темнее при наведении */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Темнее при наведении */
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+  .admin-content, .user-content {
+    width: 90%;
+  }
+
+  .order-item {
+    padding: 10px;
+  }
+}
